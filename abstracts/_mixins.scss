@@ -1,0 +1,14 @@
+@mixin clearfixHack {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin photo {
+    position: absolute;
+    box-shadow: .2rem .5rem 2rem rgba($color-black, 0.6);
+    width: 50%;
+    border-radius: .2rem;
+}
