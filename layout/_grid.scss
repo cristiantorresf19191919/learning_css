@@ -3,7 +3,7 @@ $espacioMargin:6rem;
     // If the viewport is smaller than the width specified then it will simply fills 100%
     // of the available space
     width: $row-grid-width;
-    border: 1px solid black;
+    // border: 1px solid black;
     margin: 0 auto;
     // select everything except the last child
     &:not(:last-child) {

@@ -12,7 +12,8 @@
     &--description {
         display: block;
         font-size: 2rem;
-        letter-spacing: .9rem;
+        text-transform: lowercase;
+        letter-spacing: 0.15rem;
         font-weight: 200;
         /* animation: AnimacionDescripcion 3s cubic-bezier(0.165, 0.84, 0.44, 1); */
         animation-name: AnimacionDescripcion;
@@ -46,16 +47,42 @@
     }
 }
 
+.desarrollo-titulo-box{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.desarrollo-titulo{
+    color: white !important;
+
+}
+
+.descripcion-desarrollo-web{
+    color: #fff;
+}
+
 .heading-tertiary {
-    font-size: $default-font-size;
+    font-size: 3.8rem;
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 6rem;
     cursor: unset;
 }
+.heading-cuatro{
+    font-size: 3.2rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    line-height: 4rem;
+    cursor: unset;
+}
+
+
+
+
 
 .paragraph {
     font-size: $default-font-size;
     line-height: 4.1rem;
+    text-align: justify;
     &:not(:last-child) {
         margin-bottom: 3rem;
     }

@@ -1,39 +1,179 @@
 .card {
- 
   text-align: center;
   position: relative;
-  height: 50rem;
+  height: 71rem;
+  height: auto;
+  perspective: 50rem;
   background-color: #edecf3;
   &__side {
-    perspective: 80rem;    
-    -moz-perspective: 80rem;    
-    height: 50rem;
+    perspective: 50rem;
+    -moz-perspective: 100rem;
+    height: 71rem;
     font-size: 4rem;
     transition: all 1s ease;
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: $box-shadow;  
+    box-shadow: $box-shadow;
+    overflow: hidden;
     &--front {
-      &-1{
-          background-image: linear-gradient(to right bottom,$color-secundary-light,$color-secundary-dark);
+      position: relative;
+      height: 71rem;
+      &-1 {
+        background-color: $color-secundary-light;
+
+        background: linear-gradient(to right, #38444d, #596164);
+      }
+
+      &-2 {
+        background-color: $color-secundary-light;
+
+        background: linear-gradient(to right, #38444d, #596164);
+      }
+
+      &-3 {
+        background-color: $color-secundary-light;
+
+        background: linear-gradient(to right, #38444d, #596164);
       }
     }
     &--back {
       transform: rotateY(-180deg);
-      &-1{
-        background-image: linear-gradient(to right bottom,$color-terciary-light,$color-terciary-dark);
+      height: 71rem;
+      &-1 {
+        background-image: linear-gradient(45deg, #868f96, #596164);
+      }
+      &-2 {
+        background-image: linear-gradient(to bottom right, #48c6ef, #6f86d6);
+      }
+      &-3 {
+        background-image: linear-gradient(88deg, #09203f, #537895);
       }
     }
   }
   &:hover &__side--front {
-      
     transform: rotateY(180deg);
   }
-  &:hover &__side--back{
-      transform: rotateY(0);
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  // estilos de cara de frente
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%, 0 100%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    &--1 {
+      background-image: linear-gradient(to right bottom, green, darkgreen),
+        url("https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_960_720.jpg");
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgb(105, 1, 1),
+          darkblue
+        ),
+        url("https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_960_720.jpg");
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgb(255, 174, 0),
+          darkblue
+        ),
+        url("https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_960_720.jpg");
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: center;
+    position: absolute;
+    line-height: 4rem;
+    top: 13.5rem;
+    right: 0.5rem;
+    width: 63%;
+  }
+
+  &__heading-span {
+    padding: 0.5rem 1.5rem;
+    // trate un solo elemento span como si fueran varios
+    -webit-decoration-brake: clone;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 128, 0, 0.767),
+        rgba(0, 100, 0, 0.795)
+      );
+      transition: all 0.05s;
+    }
+    &--2 {
+      background-image: linear-gradient(to right bottom, rgb(105, 1, 1),darkblue);
+
+      transition: all 0.05s;
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgb(255, 174, 0),
+          darkblue
+        );
+      transition: all 0.05s;
+    }
+  }
+
+  &__details {
+    padding: 1rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        // text-align: center;
+        font-size: 1.7rem;
+        padding: 1rem;
+
+        color: white;
+        &:not(:last-child) {
+          border-bottom: 1px solid #fefe;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $color-white;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
   }
 }
