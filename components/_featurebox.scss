@@ -6,7 +6,7 @@
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 2rem rgba($color-black,.4);
-    transition: all .05s;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &__icon{
         font-size: 12rem;
@@ -20,9 +20,9 @@
     }
     &:hover{
         transform: translateX(-3.54px) scale(1.07);
-        filter: brightness(180%);
-        background-color: rgba($color-white,.9);      
-        box-shadow: .2rem .1rem 1rem rgba($color-black,.9);
+        // filter: brightness(180%);
+        background-color: lighten($color-white,.9);      
+        box-shadow: .3rem .1rem 1rem $color-black;
     }
 
 }

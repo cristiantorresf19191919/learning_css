@@ -40,3 +40,29 @@
   // background-color: aquamarine;
 
 }
+
+
+.section-book{
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom,$color-secundary-light,$color-secundary-dark);
+
+}
+/* SOLID COLOR GRADIENT*/
+
+.book{
+  background-image: linear-gradient(105deg ,
+                                    rgba($color-white,.85) 0%,
+                                    rgba($color-white,.85) 50%,
+                                    transparent 50% 
+                                    )
+                                     ,url("https://www.bing.com/th?id=OIP.TJxRfBiEm_sS5omd_h19XgHaEK&pid=Api&rs=1");
+  background-size: 100%;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(#222,.7);
+
+  &__form{
+    width: 50%;
+    padding: 6rem;
+  }
+}
