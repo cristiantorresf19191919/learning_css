@@ -39,8 +39,50 @@
       display: block;
   }
 
-  &__input:placeholder-shown + &__label{
+  &__radio-group{
+    width: 49%;
+    display: inline-block;
 
   }
+
+  &__radio-label{
+    font-size: $default-font-size;
+    position: relative;
+    cursor: pointer;
+    padding-left: 4.5rem;
+  }
+
+  &__radio-button{
+    /* just have to be specified it works as relative*/
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $primary-color;
+    border-radius: 50%;
+    display: inline-block;
+    left: 0;
+    top: -.4rem;
+    &::after{
+      content: "";
+      display: block;
+      border-radius: 50%;
+      height: 1.2rem;
+      width: 1.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: $primary-color;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+    }   
+  }
+
+  &__radio-group-input:checked ~ &__radio-label &__radio-button::after {
+
+  }
+
+ 
+
+  
 
 }
