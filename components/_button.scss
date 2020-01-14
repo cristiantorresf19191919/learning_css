@@ -66,11 +66,13 @@
 
 
 .boton {
+    
+  &,  
   &:link,
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 0.5rem 2.7rem;
+    padding: 1.5rem 2.7rem;
     display: inline-block;
     /* margin-top: 6%; */
     border-radius: 10rem;
@@ -79,7 +81,12 @@
     position: relative;
     /* transition-property: all;
     transition-duration: 0.4s; */
+    //change button element
+    border: none;
+    cursor: pointer;
+  
   }
+  &:focus,
   &:hover {
     transform: translateY(-0.9rem);
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.801);
